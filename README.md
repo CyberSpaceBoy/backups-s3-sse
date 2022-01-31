@@ -1,6 +1,6 @@
 # backups-s3-sse
 
-> A simple backup and restore process using Python and S3-compatible SSE encryption :)
+> A simple backup and restore process built with Python using SSE encryption and S3-compatible service :)
 
 ## Dependencies
 
@@ -21,18 +21,14 @@ pip install boto3 python-dotenv
 
 ## Configure
 
-### Configure .env file 
-
-> Generate a random 32 hexadecimal password
+### Generate a random 32 hexadecimal password
 
 ```bash
 # Note: Your encryption key must be 32 characters
 openssl rand -hex 16
 ```
 
-> Alter the default .env file. 
-
-Provide access key, secret, and bucket endpoint settings.
+### Provide access key, secret, and bucket endpoint settings.
 
 ```text
 # AWS settings
@@ -46,7 +42,7 @@ SSE_ENCRYPTION_KEY="example-encryption-key-987654321"
 SSE_ENCRYPTION_ALGO="AES256"
 ```
 
-Then save it.
+### Then save it.
 
 ## Use
 
@@ -63,7 +59,7 @@ python3 s3-sse-backup.py restore gravatar.jpg
 ## Known Issues
 
 * The process only allows sending or restoring one file at a time.
-* The process doesn't support storing files nested folders on remote S3 service. (Files are stored in a single folder as specified in .env file.)
+* The process doesn't support sending files while retaining nested folder structure. (Files are stored in a single folder as specified in `.env` file)
 * The process to restore file cannot start with a path name.
 
 ## Other Resources
