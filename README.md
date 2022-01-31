@@ -1,6 +1,6 @@
-# backups-s3-sse
+# Backup. All. the. Things.
 
-> A simple backup and restore process built with Python using SSE encryption and S3-compatible service :)
+> A simple backup and restore process which supports SSE encryption for S3 object storage :)
 
 ## Dependencies
 
