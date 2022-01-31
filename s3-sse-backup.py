@@ -2,9 +2,9 @@
 import boto3
 import os
 import sys
-from dotenv import load_dotenv
+from EnvLoad import load_env
 
-load_dotenv()  # take environment variables from .env.
+load_env()  # take environment variables from .env.
 
 ## setup bucket params
 cfg = {
