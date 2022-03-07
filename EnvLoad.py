@@ -1,4 +1,4 @@
-from os import system, environ
+from os import environ
 def load_env(filename='.env'):
 
   proceed = False
@@ -16,4 +16,4 @@ def load_env(filename='.env'):
 
       current = parsed_data[i].split('=')
 
-      system(current[0]+'='+current[1])
+    environ[current[0]]=current[1])
